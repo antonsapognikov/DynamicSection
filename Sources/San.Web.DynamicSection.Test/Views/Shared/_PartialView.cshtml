@@ -1,0 +1,13 @@
+﻿@using San.Web.DynamicSection.Extensions
+
+@using (Html.BeginSection("Stylesheets"))
+{
+    Html.AddStylesheetFile("~/Content/control");
+}
+@using (Html.BeginSection("Scripts"))
+{
+    Html.AddScriptFile("~/bundles/jqueryval");
+}
+
+<div class="control">
+</div>

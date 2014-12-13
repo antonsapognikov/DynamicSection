@@ -1,0 +1,24 @@
+﻿@using San.Web.DynamicSection.Extensions
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        @using (Html.BeginSection("Stylesheets"))
+        {
+            Html.AddStylesheetFile("~/Content/bootstrap");
+        }
+        @using (Html.BeginSection("Scripts"))
+        {
+            Html.AddScriptFile("~/bundles/jquery");
+            Html.AddScriptFile("~/bundles/bootstrap");
+        }
+        @Html.RenderSection("Stylesheets")
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+        @Html.RenderSection("Scripts")
+    </body>
+</html>

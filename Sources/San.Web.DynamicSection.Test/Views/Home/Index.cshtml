@@ -1,0 +1,17 @@
+﻿@using San.Web.DynamicSection.Extensions
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginSection("Stylesheets"))
+{
+    Html.AddStylesheetFile("~/Content/page");
+}
+@using (Html.BeginSection("Scripts"))
+{
+    Html.AddScriptFile("~/bundles/modernizr");
+}
+
+<div>
+    @Html.Partial("_PartialView")
+</div>
